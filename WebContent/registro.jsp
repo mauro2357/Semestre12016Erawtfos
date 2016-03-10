@@ -14,7 +14,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>Cinema</title>
+    <title>Hotel</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <!--external css-->

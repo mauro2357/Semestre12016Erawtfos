@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Confortware">
+    <wb-module deploy-name="confortware">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/scr/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/text/java"/>
-        <property name="context-root" value="Confortware"/>
-        <property name="java-output-path" value="/Confortware/build/classes"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <property name="context-root" value="confortware"/>
+        <property name="java-output-path" value="/confortware/build/classes"/>
     </wb-module>
 </project-modules>
