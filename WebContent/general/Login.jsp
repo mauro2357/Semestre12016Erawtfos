@@ -48,7 +48,7 @@
 		
 		                </span>
 		            </label>
-		            <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> ENVIAR </button>
+		            <button class="btn btn-theme btn-block" href="index.html" type="submit" value="true" name="login"><i class="fa fa-lock" ></i> ENVIAR </button>
 		            <hr>
 		            <div class="registration">
 		                <a class="" href="Home.jsp">
