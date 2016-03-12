@@ -95,66 +95,66 @@
 				</div>
 				<div id="touch_gallery">
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-1-big.jpg"><img src="images/index-2_img-1.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/b1.jpg"><img src="images/b1.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Gamus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eros.</p>
+							<h4>Hawaii</h4>
+							<p>cocktail, una conocida destilería le exigió una bebida con esa tonalidad, ya que estaba promocionando el Curaçao. Aunque la combinación de ingredientes ha evolucinado, el Hawaii mantiene el ron como bebida base y el clásico paraguas como adorno..</p>
 						</article>
 					</div>
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-2-big.jpg"><img src="images/index-2_img-2.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/Margarita.jpg"><img src="images/Margarita.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Hamus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis erose.</p>
+							<h4>Margarita</h4>
+							<p>Tequila, Triple sec o Cointreau, y zumo bien de limón, bien de lima. Hielo opcional, sal en los bordes del vaso también optativa.</p>
 						</article>
 					</div>
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-3-big.jpg"><img src="images/index-2_img-3.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/Daiquiri.jpg"><img src="images/Daiquiri.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Famus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eros eto.</p>
+							<h4>Daiquiri</h4>
+							<p>Pensar en Daiquiri es pensar en playa, palmeras, música, verano.... es pensar en Cuba. Allí nace este cocktail que se pide en los bares.</p>
 						</article>
 					</div>
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-4-big.jpg"><img src="images/index-2_img-4.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/D'Vicio.jpg"><img src="images/D'Vicio.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Samus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eroserto.</p>
+							<h4> D'Vicio</h4>
+							<p>Samus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada.</p>
 						</article>
 					</div>
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-5-big.jpg"><img src="images/index-2_img-5.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/Cosmopolitan.jpg"><img src="images/Cosmopolitan.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Gamus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eros.</p>
+							<h4>Cosmopolitan</h4>
+							<p>Son varios nombres los que se disputan la creación del Cosmopolitan. Algunos creen que fue una comunidad gay de Provincetown (Massachussets), en los años 70..</p>
 						</article>
 					</div>
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-6-big.jpg"><img src="images/index-2_img-6.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/Caipirinha.jpg"><img src="images/Caipirinha.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Lamus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eroso.</p>
+							<h4>Caipirinha</h4>
+							<p>La caipirinha es uno de los cocktails más famosos del mundo, de origen brasileño pero muy extendido por todas partes en los últimos años. El ingrediente principal y básico es la cachaça, la bebida alcohólica destilada más popular de Brasil.</p>
 						</article>
 					</div>
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-7-big.jpg"><img src="images/index-2_img-7.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/White Russia.jpg"><img src="images/White Russia.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Wamus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eroser.</p>
+							<h4> White Russia</h4>
+							<p>Ideal para después de cenar, el White Russian se hizo famoso entre la gente joven porque era la bebida favorita de The Dude, el protagonista de El Gran Lebowski. Hoy te enseñamos su receta.</p>
 						</article>
 					</div>
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-8-big.jpg"><img src="images/index-2_img-8.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/Ocean's.jpg"><img src="images/Ocean's.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Kamus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis erose.</p>
+							<h4> Ocean's</h4>
+							<p>la historia de este combinado es bastante peculiar, ya que nace como respuesta a un desafío de La Voz de Galicia a una serie de cocteleros de A Coruña, a los que se les propuso captar la esencia de la ciudad en un cocktail..</p>
 						</article>
 					</div>
 					<div class="grid_4">
-						<div class="img_container"><a href="images/index-2_img-9-big.jpg"><img src="images/index-2_img-9.jpg" alt="projects"></a></div>
+						<div class="img_container"><a href="images/buchanans 18.jpg"><img src="images/buchanans 18.jpg" alt="projects"></a></div>
 						<article>
-							<h4>Work name</h4>
-							<p>Gamus at magna non nunc tristique rhoncuseri tym. Aliquam nibh ante, egestas id dictum aterert commodo re luctus libero. Praesent faucibus malesuada cibuste. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed Curabitur vel lorem sit amet nulla ullamcorper fermentum. In vitae varius augue, eu consectetur ligula. Etiam dui eros, laoreet sit amet est vel, commodo venenatis eros.</p>
+							<h4>buchanans 18</h4>
+							<p>Buchanan's 18 años es un whisky de tipo blended, de procedencia escocesa, surgido con el fin de destacar por su excelente calidad y cualidades.</p>
 						</article>
 					</div>
 				</div>
