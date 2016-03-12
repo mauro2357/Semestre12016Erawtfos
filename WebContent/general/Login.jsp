@@ -36,7 +36,7 @@
 	  <div id="login-page">
 	  	<div class="container">
 	  	
-		      <form class="form-login" action="index.html" method="get">
+		      <form class="form-login" action="Controlador_Ingreso" method="get">
 		        <h2 class="form-login-heading">Ingresa</h2>
 		        <div class="login-wrap">
 		            <input type="text" class="form-control" placeholder="Documento" name="documento" autofocus>
@@ -59,7 +59,7 @@
 		        </div>
 		
 		          <!-- Modal -->
-		 		<form action="index.html" method="get">
+		 		<form action="Controlador_Ingreso" method="get" >
 		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
 		              <div class="modal-dialog">
 		                  <div class="modal-content">
@@ -69,11 +69,11 @@
 		                      </div>
 		                      <div class="modal-body">
 		                          <p>Ingresa tu Documento y se te enviara un correo con tu clave.</p>
-		                          <input type="text" name="recuperacion" placeholder="Documento" autocomplete="off" class="form-control placeholder-no-fix">
+		                          <input type="text" name="doc_recuperar" placeholder="Documento" autocomplete="off" class="form-control placeholder-no-fix">
 		
 		                      </div>
 		                      <div class="modal-footer">
-		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
+		                          <button data-dismiss="modal" class="btn btn-default" type="button" value="true" name="recuperar">Cancelar</button>
 		                          <button class="btn btn-theme" type="submit">Aceptar</button>
 		                      </div>
 		                  </div>
