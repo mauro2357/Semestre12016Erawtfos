@@ -1,20 +1,26 @@
-<!DOCTYPE html>
+<%@page import="Clases.usuario"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="conexionesbd.Consultas"%>
+<%@page import="java.sql.ResultSetMetaData"%>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - Bootstrap Admin Template</title>
+    <title>Clientes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap-datepicker/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="assets/js/bootstrap-daterangepicker/daterangepicker.css" />
         
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -33,13 +39,19 @@
       <!-- **********************************************************************************************************************************************************
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
-      <!--header start-->
+      <!--header start--> 
+      <%  	
+      	Consultas datos = new Consultas();
+      	usuario r = new usuario();
+		HttpSession sesion = request.getSession();
+         %>
+        
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>DASHGUM FREE</b></a>
+            <a href="index.html" class="logo"><b>HOTEL</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -198,9 +210,11 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
-              	  	
+              	<%  if(sesion.getAttribute("usuario")!=null){
+       					 r = (usuario) session.getAttribute("usuario");%>
+       					<p class="centered"><a href="profile.html"><img src="empleados/assets/img/juan_carlos.jpg %>" class="img-circle" width="60"></a></p>
+              	  		<h5 class="centered"><%= r.getnombre() %></h5>  
+              	  		<%} %>	  	
                   <li class="mt">
                       <a href="index.html">
                           <i class="fa fa-dashboard"></i>
@@ -243,21 +257,21 @@
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
+                      <a href="javascript:;" >
                           <i class="fa fa-tasks"></i>
                           <span>Forms</span>
                       </a>
                       <ul class="sub">
-                          <li class="active"><a  href="form_component.html">Form Components</a></li>
+                          <li><a  href="form_component.html">Form Components</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a class="active" href="javascript:;" >
                           <i class="fa fa-th"></i>
                           <span>Data Tables</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="basic_table.html">Basic Table</a></li>
+                          <li class="active"><a  href="basic_table.html">Basic Table</a></li>
                           <li><a  href="responsive_table.html">Responsive Table</a></li>
                       </ul>
                   </li>
@@ -284,225 +298,169 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> Registro de Huespedes</h3>
-          	
-          	<!-- BASIC FORM ELELEMNTS -->
-          	<div class="row mt">
-          		<div class="col-lg-12">
-                  <div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Datos del Huesped</h4>
-                      <form class="form-horizontal style-form" method="get">
-                      
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Nombres</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control">
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Apellidos</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control">
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Documento de Identidad</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control">
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Edad</label>
-                              <div class="col-sm-10">
-                                  <input type="text" class="form-control">
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Correo Electronico</label>
-                              <div class="col-sm-10">
-                                  <input type="email" class="form-control">
-                              </div>
-                          </div>
-                         
-                         
-                         
-                         
-                         
-                         
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Disabled</label>
-                              <div class="col-sm-10">
-                                  <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Placeholder</label>
-                              <div class="col-sm-10">
-                                  <input type="text"  class="form-control" placeholder="placeholder">
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Password</label>
-                              <div class="col-sm-10">
-                                  <input type="password"  class="form-control" placeholder="">
-                              </div>
-                          </div>
-                          <div class="form-group">
-                              <label class="col-lg-2 col-sm-2 control-label">Static control</label>
-                              <div class="col-lg-10">
-                                  <p class="form-control-static">email@example.com</p>
-                              </div>
-                          </div>
-                      </form>
-                  </div>
-          		</div><!-- col-lg-12-->      	
-          	</div><!-- /row -->
-          	
-          	<!-- INLINE FORM ELELEMNTS -->
-          	<div class="row mt">
-          		<div class="col-lg-12">
-          			<div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Inline Form</h4>
-                      <form class="form-inline" role="form">
-                          <div class="form-group">
-                              <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-                          </div>
-                          <div class="form-group">
-                              <label class="sr-only" for="exampleInputPassword2">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-                          </div>
-                          <button type="submit" class="btn btn-theme">Sign in</button>
-                      </form>
-          			</div><!-- /form-panel -->
-          		</div><!-- /col-lg-12 -->
-          	</div><!-- /row -->
-          	
-          	<!-- INPUT MESSAGES -->
-          	<div class="row mt">
-          		<div class="col-lg-12">
-          			<div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Input Messages</h4>
-                          <form class="form-horizontal tasi-form" method="get">
-                              <div class="form-group has-success">
-                                  <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Input with success</label>
-                                  <div class="col-lg-10">
-                                      <input type="text" class="form-control" id="inputSuccess">
-                                  </div>
-                              </div>
-                              <div class="form-group has-warning">
-                                  <label class="col-sm-2 control-label col-lg-2" for="inputWarning">Input with warning</label>
-                                  <div class="col-lg-10">
-                                      <input type="text" class="form-control" id="inputWarning">
-                                  </div>
-                              </div>
-                              <div class="form-group has-error">
-                                  <label class="col-sm-2 control-label col-lg-2" for="inputError">Input with error</label>
-                                  <div class="col-lg-10">
-                                      <input type="text" class="form-control" id="inputError">
-                                  </div>
-                              </div>
-                          </form>
-          			</div><!-- /form-panel -->
-          		</div><!-- /col-lg-12 -->
-          	</div><!-- /row -->
-          	
-          	<!-- INPUT MESSAGES -->
-          	<div class="row mt">
-          		<div class="col-lg-12">
-          			<div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Checkboxes, Radios & Selects</h4>
-						<div class="checkbox">
-						  <label>
-						    <input type="checkbox" value="">
-						    Option one is this and that&mdash;be sure to include why it's great
-						  </label>
-						</div>
-						
-						<div class="radio">
-						  <label>
-						    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-						    Option one is this and that&mdash;be sure to include why it's great
-						  </label>
-						</div>
-						<div class="radio">
-						  <label>
-						    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-						    Option two can be something else and selecting it will deselect option one
-						  </label>
-						</div>
-						
-						<hr>
-						<label class="checkbox-inline">
-						  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-						</label>
-						
-						<hr>
-						<select class="form-control">
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
-						</select>
-						<br>
-						<select multiple class="form-control">
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
-						</select>        		
-          			</div><!-- /form-panel -->
-          		</div><!-- /col-lg-12 -->
-          		
-          	<!-- CUSTOM TOGGLES -->
-          		<div class="col-lg-12">
-          			<div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Custom Toggles</h4>
-                          <div class="row mt">
-                              <div class="col-sm-6 text-center">
-                                  <input type="checkbox" checked="" data-toggle="switch" />
-                              </div>
-                              <div class="col-sm-6 text-center">
-                                  <input type="checkbox" data-toggle="switch" />
-                              </div>
-                          </div>
-                          <div class="row mt">
-                              <div class="col-sm-6 text-center">
-                                  <div class="switch switch-square"
-                                       data-on-label="<i class=' fa fa-check'></i>"
-                                       data-off-label="<i class='fa fa-times'></i>">
-                                      <input type="checkbox" />
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 text-center">
-                                  <div class="switch switch-square"
-                                       data-on-label="<i class=' fa fa-check'></i>"
-                                       data-off-label="<i class='fa fa-times'></i>">
-                                      <input type="checkbox" checked="" />
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="row mt">
-                              <div class="col-sm-6 text-center">
-                                  <input type="checkbox" disabled data-toggle="switch" />
-                              </div>
-                              <div class="col-sm-6 text-center">
-                                  <input type="checkbox" checked disabled data-toggle="switch" />
-                              </div>
-                          </div>
-          			</div>
-          		</div>
-          	</div><!-- /row -->
-          	
-          	
+          	<h3><i class="fa fa-angle-right"></i>  USUARIOS HOTEL</h3>
+				<div class="row">
+				
+	                  <div class="col-md-12">
+	                  	  <div class="content-panel">
+	                  	  	  <h4><i class="fa fa-angle-right"></i>  Huesped</h4>
+	                  	  	  <hr>
+		                      <table class="table">
+		                          <thead>
+		                          <tr>
+		                          <%ResultSet resultado_consulta;
+		                          	datos.crearConexion();
+		                          	resultado_consulta = datos.huespeds();
+		                          	ResultSetMetaData rsmd = resultado_consulta.getMetaData();
+		                          	int nroColumnas = rsmd.getColumnCount();
+		                          	out.println("<th>#</th>");
+		                          	for(int i=1;i<=nroColumnas;i++){
+					                    out.println("<th>"+rsmd.getColumnName(i)+"</th>");
+                					}                %>
+		                          </tr>
+		                          </thead>
+		                          
+		                          
+		                          <tbody>
+		                          <tr>
+					<% 		for (int j = 1 ; j <= resultado_consulta.getRow();j++ ){ 
+							out.println("<td>"+j+"</td>");
+		                    for(int i=1;i<=nroColumnas;i++){
+	                       	 	out.println("<td>"+resultado_consulta.getString(i)+"</td>");
+		                    }
+		      
+						}	%>
+		                          </tr>
+		                          </tbody>
+		                      </table>
+	                  	  </div><! --/content-panel -->
+	                  </div><!-- /col-md-12 -->
+                  
+	                  <div class="col-md-12 mt">
+	                  	<div class="content-panel">
+	                          <table class="table table-hover">
+	                  	  	  <h4><i class="fa fa-angle-right"></i>  Empleado</h4>
+	                  	  	  <hr>
+	                              <thead>
+	                              <tr>
+	                                <%
+		                          	datos.crearConexion();
+		                          	resultado_consulta = datos.empleados();
+		                         	rsmd = resultado_consulta.getMetaData();
+		                          	nroColumnas = rsmd.getColumnCount();
+		                          	out.println("<th>#</th>");
+		                          	for(int i=1;i<=nroColumnas;i++){
+					                    out.println("<th>"+rsmd.getColumnName(i)+"</th>");
+                					}                %>
+	                              </tr>
+	                              </thead>
+	                              
+	                              <tbody>
+	                              <tr>
+	            <% 	
+	            		for (int j = 1 ; j <= resultado_consulta.getRow();j++ ){ 
+							out.println("<td>"+j+"</td>");
+		                    for(int i=1;i<=nroColumnas;i++){
+	                       	 	out.println("<td>"+resultado_consulta.getString(i)+"</td>");
+		                 	 }
+		      
+						}	%>
+	                              </tr>
+	                              </tbody>
+	                          </table>
+	                  	  </div><! --/content-panel -->
+	                  </div><!-- /col-md-12 -->
+				</div><!-- row -->
+
+              <div class="row mt">
+                  <div class="col-md-12">
+                      <div class="content-panel">
+                          <table class="table table-striped table-advance table-hover">
+	                  	  	  <h4><i class="fa fa-angle-right"></i> Advanced Table</h4>
+	                  	  	  <hr>
+                              <thead>
+                              <tr>
+                                  <th><i class="fa fa-bullhorn"></i> Company</th>
+                                  <th class="hidden-phone"><i class="fa fa-question-circle"></i> Descrition</th>
+                                  <th><i class="fa fa-bookmark"></i> Profit</th>
+                                  <th><i class=" fa fa-edit"></i> Status</th>
+                                  <th></th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td><a href="basic_table.html#">Company Ltd</a></td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>12000.00$ </td>
+                                  <td><span class="label label-info label-mini">Due</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="basic_table.html#">
+                                          Dashgum co
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>17900.00$ </td>
+                                  <td><span class="label label-warning label-mini">Due</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="basic_table.html#">
+                                          Another Co
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>14400.00$ </td>
+                                  <td><span class="label label-success label-mini">Paid</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <a href="basic_table.html#">
+                                          Dashgum ext
+                                      </a>
+                                  </td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>22000.50$ </td>
+                                  <td><span class="label label-success label-mini">Paid</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td><a href="basic_table.html#">Total Ltd</a></td>
+                                  <td class="hidden-phone">Lorem Ipsum dolor</td>
+                                  <td>12120.00$ </td>
+                                  <td><span class="label label-warning label-mini">Due</span></td>
+                                  <td>
+                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                  </td>
+                              </tr>
+                              </tbody>
+                          </table>
+                      </div><!-- /content-panel -->
+                  </div><!-- /col-md-12 -->
+              </div><!-- /row -->
+
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
@@ -510,8 +468,8 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-       				2016-confortware
-              <a href="form_component.html#" class="go-top">
+              2014 - Alvarez.is
+              <a href="basic_table.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
@@ -531,25 +489,6 @@
     <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
-
-	<!--custom switch-->
-	<script src="assets/js/bootstrap-switch.js"></script>
-	
-	<!--custom tagsinput-->
-	<script src="assets/js/jquery.tagsinput.js"></script>
-	
-	<!--custom checkbox & radio-->
-	
-	<script type="text/javascript" src="assets/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap-daterangepicker/date.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap-daterangepicker/daterangepicker.js"></script>
-	
-	<script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-	
-	
-	<script src="assets/js/form-component.js"></script>    
-    
     
   <script>
       //custom select box

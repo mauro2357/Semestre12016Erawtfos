@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Map;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +27,9 @@ public class Controlador_Ingreso extends HttpServlet {
 	private RequestDispatcher responder;
     private ResultSet consultabd; 
     private String correo;
-    private usuario datos;
+    private usuario cliente;
+    private HttpSession session;
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -42,25 +45,44 @@ public class Controlador_Ingreso extends HttpServlet {
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession session = request.getSession();
-		System.out.println(request.getParameter("recuperacion"));
-		if (!request.getParameter("recuperacion").equals("")){
-			Consultas consultar_mail = new Consultas();
-			if (consultar_mail.crearConexion()){
-				correo = consultar_mail.data_correo(request.getParameter("recuperacion"));
-				System.out.println(correo);
-			}
+		session = request.getSession();
+		response.setContentType("text/html;charset=ISO-8859-1");
+		if(request.getParameter("formlogin").equals("login")){
+			this.IngresarUsuario(request.getParameter("documento"),request.getParameter("clave"));
+			response.sendRedirect("/confortware/general/Home.jsp");
 		}
-		else{
-			Consultas consultar_usuario = new Consultas();
-			if(consultar_usuario.crearConexion()){
-				datos = new usuario();
-				datos = consultar_usuario.login("hola","hola");
-				System.out.println(datos.getnombre());
-				System.out.println(datos.gettipo());
-			}
+		if (request.getParameter("formlogin").equals("recuperar")){
+			this.EnviarCorreo(request.getParameter("doc_recuperacion"));
+			response.sendRedirect("/confortware/general/Login.jsp");
 		}
+			
+		}
+	
+	
+	private void IngresarUsuario(String a,String b)throws ServletException, IOException {
+		consultar_usuario = new Consultas();
+		if(consultar_usuario.crearConexion()){
+			cliente = new usuario();
+			cliente = consultar_usuario.login(a,b);
+			System.out.println(cliente.getnombre());
+			System.out.println(cliente.gettipo());
+			session.setAttribute("usuario", cliente);
+			
+		}
+		
 	}
+
+
+	private void EnviarCorreo(String a)throws ServletException, IOException {
+		consultar_mail = new Consultas();
+		if (consultar_mail.crearConexion()){
+			correo = consultar_mail.data_correo(a);
+			System.out.println(correo);
+				
+		}
+		
+	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

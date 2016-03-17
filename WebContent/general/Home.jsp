@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@page import="Clases.usuario"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -45,6 +46,10 @@
 </head>
 <body class="index">
 <!--==============================header=================================-->
+<%  	
+		usuario r = new usuario();
+		HttpSession sesion = request.getSession();
+        %>
 <header id="header">
 	<div id="stuck_container">
 		<div class="container">
@@ -78,8 +83,17 @@
 							
 							<li><a href="index-2.html">Reservas</a></li>
 							<li><a href="index-3.html">Contactenos</a></li>
-							<li><a href="Login.jsp">Login</a></li>
+							<%
+							if(sesion.getAttribute("usuario")!=null){
+						        r = (usuario) session.getAttribute("usuario"); 
+								if ( !r.gettipo().equals("huesped")) {%>
+									<li><a href="/confortware/empleados/clientes.jsp">Empleados</a></li>
+									<li><a href="Home.jsp">LogOut</a></li>
+									<%}}else{ %>
+							        <li><a href="Login.jsp">Login</a></li>
+									<%} %>
 							
+						
 						</ul>
 					</nav>
 				</div>
