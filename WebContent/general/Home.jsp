@@ -55,7 +55,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="grid_12">
-					<h1><a href="index.html">Hotel ?</a><span>Resort</span></h1>
+					<h1><a href="index.html">Hotel Ritz de Colombia</a><span>Resort</span></h1>
 					<nav>
 						<ul class="sf-menu">
 							<li><a href="Home.jsp">Home</a></li>
@@ -72,7 +72,7 @@
 									</li>
 									<li><a>Otros servicios</a>
 										<ul>
-											<li><a href="#">Eventos</a></li>
+											<li><a href="#">Otros Eventos</a></li>
 											<li><a href="#">Lorem ipsum</a></li>
 											<li><a href="#">Lorem ipsum</a></li>
 										</ul>

@@ -44,7 +44,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="grid_12">
-					<h1><a href="index.html">Hotel Ritz de Colombia</a><span>Resort</span></h1>
+					<h1><a href="index.html">Hotel Ritz</a><span>Resort</span></h1>
 					<nav>
 						<ul class="sf-menu">
 							<li><a href="Home.jsp">Home</a></li>
@@ -52,11 +52,11 @@
 								<ul>
 									<li><a href="Restaurante.jsp">Restaurante</a></li>
 									<li><a href="Bar.jsp">Bar</a></li>
-									<li>Recreacion
+									<li>Reservaciones
 										<ul>
-											<li><a href="#">Deportes</a></li>
-											<li><a href="#">Tours</a></li>
-											<li><a href="#">Eventos</a></li>
+											<li><a href="#">Reuniones</a></li>
+											<li><a href="#">musica</a></li>
+											<li><a href="#">Fiestas</a></li>
 										</ul>
 									</li>
 									<li><a href="#">Otros servicios</a>
