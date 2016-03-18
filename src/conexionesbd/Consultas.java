@@ -45,11 +45,11 @@ public class Consultas {
 		try {
 			Statement sentencia = conexion.createStatement();
 			resultado = sentencia
-					.executeQuery("SELECT usuario.nombres,tipo_usuarios.cargo,usuario.imagen FROM hotel.tipo_usuarios inner join hotel.usuario on usuario.tipo_usuario = tipo_usuarios.codigo  where documento='"
-							+ usuario + "' and clave='" + clave + "';");
+					.executeQuery("SELECT usuario.Nombres,tipo_usuarios.Cargo,usuario.Imagen FROM hotel.tipo_usuarios inner join hotel.usuario on usuario.Tipo = tipo_usuarios.Codigo  where documento='"
+							+ usuario + "' and Clave='" + clave + "';");
 			if (resultado.next()) {
-				datos_usuario = new usuario(resultado.getString("nombres"),
-						resultado.getString("cargo"),resultado.getString("imagen"));
+				datos_usuario = new usuario(resultado.getString("Nombres"),
+						resultado.getString("Cargo"),resultado.getString("Imagen"));
 			}
 			resultado.close();
 			sentencia.close();
@@ -65,9 +65,9 @@ public class Consultas {
 		String correo = null;
         try {
             Statement sentencia = conexion.createStatement();
-            resultado = sentencia.executeQuery("SELECT correo FROM hotel.usuario where documento='"+documento+"';");
+            resultado = sentencia.executeQuery("SELECT Correo FROM hotel.usuario where Documento='"+documento+"';");
             if (resultado.next()){
-               correo = resultado.getString("correo");
+               correo = resultado.getString("Correo");
             }
             resultado.close();
             sentencia.close();
@@ -82,7 +82,7 @@ public class Consultas {
 	public ResultSet huespeds(){
 		try {
             Statement sentencia = conexion.createStatement();
-            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario where tipo_usuario ='1';");
+            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario where Tipo ='9';");
             if (resultado.next()){
                 return resultado; 
             }
@@ -98,7 +98,7 @@ public class Consultas {
 	public ResultSet empleados(){
 		try {
             Statement sentencia = conexion.createStatement();
-            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario where tipo_usuario ='1';");
+            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario where Tipo ='1';");
             if (resultado.next()){
                 return resultado; 
             }

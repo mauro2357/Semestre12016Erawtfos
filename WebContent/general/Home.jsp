@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" %>
 <%@page import="Clases.usuario"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -30,7 +30,8 @@
 			}
 		});
 	</script>
-	<!--<![endif]-->
+
+<!--<![endif]-->
 	<!--[if lt IE 8]>
 	<div style=' clear: both; text-align:center; position: relative;'>
 	 <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -55,11 +56,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="grid_12">
-					<h1><a href="index.html">Hotel ?</a><span>Resort</span></h1>
+					<h1><a href="index.html">PARADAISE</a><span>Resort</span></h1>
 					<nav>
 						<ul class="sf-menu">
 							<li><a href="Home.jsp">Home</a></li>
-							<li class="current"><a href="index.html">Servicios</a>
+							<li class="current"><a>Servicios</a>
 								<ul>
 									<li><a href="Restaurante.jsp">Restaurante</a></li>
 									<li><a href="Bar.jsp">Bar</a></li>
@@ -87,12 +88,11 @@
 							if(sesion.getAttribute("usuario")!=null){
 						        r = (usuario) session.getAttribute("usuario"); 
 								if ( !r.gettipo().equals("huesped")) {%>
-									<li><a href="/confortware/empleados/clientes.jsp">Empleados</a></li>
-									<li><a href="Home.jsp">LogOut</a></li>
-									<%}}else{ %>
-							        <li><a href="Login.jsp">Login</a></li>
-									<%} %>
-							
+									<li><a href="/confortware/empleados/clientes.jsp">Empleados</a></li>	<%} %>
+									<li id ="logout"><a href="Home.jsp">LogOut</a></li>
+							   
+									<%}else{ %>
+									<li><a href="Login.jsp">Login</a></li><%} %>
 						
 						</ul>
 					</nav>
@@ -254,5 +254,14 @@
 			}
 		});
 </script>
+
+<script>
+	$(document).ready(function() {
+		$("#logout").click(function() {
+			<%sesion.invalidate();%>;
+		});
+	});
+</script>
+
 </body>
 </html>

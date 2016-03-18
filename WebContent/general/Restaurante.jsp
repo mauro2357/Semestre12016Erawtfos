@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" %>
+<%@page import="Clases.usuario"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 	<head>
@@ -41,27 +42,31 @@
 	</head>
 <body class="index-2">
 <!--==============================header=================================-->
+<%  	
+		usuario r = new usuario();
+		HttpSession sesion = request.getSession();
+        %>
 <header id="header">
 	<div id="stuck_container">
 		<div class="container">
 			<div class="row">
 				<div class="grid_12">
-					<h1><a href="index.html">Hotel ?</a><span>Resort</span></h1>
+					<h1><a href="index.html">PARADAISE</a><span>Resort</span></h1>
 					<nav>
 						<ul class="sf-menu">
 							<li><a href="Home.jsp">Home</a></li>
-							<li class="current"><a href="index.html">Servicios</a>
+							<li class="current"><a>Servicios</a>
 								<ul>
 									<li><a href="Restaurante.jsp">Restaurante</a></li>
 									<li><a href="Bar.jsp">Bar</a></li>
-									<li>Recreacion
+									<li><a>Recreacion</a>
 										<ul>
 											<li><a href="#">Deportes</a></li>
 											<li><a href="#">Tours</a></li>
 											<li><a href="#">Eventos</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Otros servicios</a>
+									<li><a>Otros servicios</a>
 										<ul>
 											<li><a href="#">Eventos</a></li>
 											<li><a href="#">Lorem ipsum</a></li>
@@ -74,8 +79,16 @@
 							
 							<li><a href="index-2.html">Reservas</a></li>
 							<li><a href="index-3.html">Contactenos</a></li>
-							<li><a href="Login.jsp">Login</a></li>
-							
+							<%
+							if(sesion.getAttribute("usuario")!=null){
+						        r = (usuario) session.getAttribute("usuario"); 
+								if ( !r.gettipo().equals("huesped")) {%>
+									<li><a href="/confortware/empleados/clientes.jsp">Empleados</a></li>	<%} %>
+									<li id ="logout"><a href="Home.jsp">LogOut</a></li>
+							   
+									<%}else{ %>
+									<li><a href="Login.jsp">Login</a></li><%} %>
+						
 						</ul>
 					</nav>
 				</div>
@@ -232,5 +245,14 @@ Tiene diferentes ambientes dentro de los cuales se destacan su Piano Bar y el sa
 		$('#touch_gallery a').touchTouch();
 	});
 </script>
+
+<script>
+	$(document).ready(function() {
+		$("#logout").click(function() {
+			<%sesion.invalidate();%>;
+		});
+	});
+</script>
+
 </body>
 </html>

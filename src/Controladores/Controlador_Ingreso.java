@@ -28,7 +28,7 @@ public class Controlador_Ingreso extends HttpServlet {
     private ResultSet consultabd; 
     private String correo;
     private usuario cliente;
-    private HttpSession session;
+    public HttpSession session;
 
     /**
      * @see HttpServlet#HttpServlet()
