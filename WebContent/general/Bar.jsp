@@ -43,6 +43,7 @@
 <%  	
 		usuario r = new usuario();
 		HttpSession sesion = request.getSession();
+		System.out.println(sesion.getId()+" "+sesion.isNew());
         %>
 <header id="header">
 	<div id="stuck_container">
@@ -81,7 +82,7 @@
 							if(sesion.getAttribute("usuario")!=null){
 						        r = (usuario) session.getAttribute("usuario");
 								if ( !r.gettipo().equals("huesped")) {%>
-									<li><a href="/confortware/empleados/clientes.jsp">Empleados</a></li>	<%} %>
+									<li><a href="/confortware/empleados/Principal.jsp">Empleados</a></li>	<%} %>
 									<li id ="logout"><a href="Home.jsp">LogOut</a></li>
 							   
 									<%}else{ %>
@@ -197,7 +198,7 @@
 <script>
 	$(document).ready(function() {
 		$("#logout").click(function() {
-			<%sesion.invalidate();%>;
+		
 		});
 	});
 </script>

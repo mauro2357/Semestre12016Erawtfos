@@ -46,6 +46,7 @@ public class Controlador_Ingreso extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		session = request.getSession();
+		System.out.println(session.getId()+" "+session.isNew());
 		response.setContentType("text/html;charset=ISO-8859-1");
 		if(request.getParameter("formlogin").equals("login")){
 			this.IngresarUsuario(request.getParameter("documento"),request.getParameter("clave"));

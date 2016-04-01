@@ -82,12 +82,9 @@ public class Consultas {
 	public ResultSet huespeds(){
 		try {
             Statement sentencia = conexion.createStatement();
-            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario where Tipo ='9';");
-            if (resultado.next()){
-                return resultado; 
-            }
-            
-            
+            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario inner join hotel.tipo_usuarios  on usuario.Tipo = tipo_usuarios.Codigo where usuario.Tipo = '9';");
+            return resultado; 
+         
         } catch (SQLException ex) {
             ex.printStackTrace(); 
          }
@@ -98,12 +95,33 @@ public class Consultas {
 	public ResultSet empleados(){
 		try {
             Statement sentencia = conexion.createStatement();
-            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario where Tipo ='1';");
-            if (resultado.next()){
-                return resultado; 
-            }
-            
-            
+            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario inner join hotel.tipo_usuarios  on usuario.Tipo = tipo_usuarios.Codigo where not usuario.Tipo = '9';");
+            return resultado; 
+    
+        } catch (SQLException ex) {
+            ex.printStackTrace(); 
+         }
+        return null;
+		}
+	
+	public ResultSet Buscar(String a ,String b ){
+		try {
+            Statement sentencia = conexion.createStatement();
+            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario inner join hotel.tipo_usuarios  on usuario.Tipo = tipo_usuarios.Codigo where  usuario."+a+" = '"+b+"';");
+            return resultado; 
+    
+        } catch (SQLException ex) {
+            ex.printStackTrace(); 
+         }
+        return null;
+		}
+	
+	public ResultSet BuscarTodos(){
+		try {
+            Statement sentencia = conexion.createStatement();
+            resultado = sentencia.executeQuery("SELECT * FROM hotel.usuario inner join hotel.tipo_usuarios  on usuario.Tipo = tipo_usuarios.Codigo ;");
+            return resultado; 
+    
         } catch (SQLException ex) {
             ex.printStackTrace(); 
          }

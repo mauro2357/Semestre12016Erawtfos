@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
 <%@page import="Clases.usuario"%>
+
+
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -49,7 +54,9 @@
 <!--==============================header=================================-->
 <%  	
 		usuario r = new usuario();
-		HttpSession sesion = request.getSession();
+		HttpSession sesion =(HttpSession) request.getSession();
+		System.out.println(sesion.getId()+" "+sesion.isNew());
+		//if(request.getParameter("logout") != null ){sesion.invalidate();}
         %>
 <header id="header">
 	<div id="stuck_container">
@@ -88,8 +95,8 @@
 							if(sesion.getAttribute("usuario")!=null){
 						        r = (usuario) session.getAttribute("usuario"); 
 								if ( !r.gettipo().equals("huesped")) {%>
-									<li><a href="/confortware/empleados/clientes.jsp">Empleados</a></li>	<%} %>
-									<li id ="logout"><a href="Home.jsp">LogOut</a></li>
+									<li><a href="/confortware/empleados/Principal.jsp">Empleados</a></li>	<%} %>
+									<li id ="logout"><a href="Home.jsp?logout=true">LogOut</a></li>
 							   
 									<%}else{ %>
 									<li><a href="Login.jsp">Login</a></li><%} %>
@@ -152,7 +159,7 @@
 				</div>
 			</div>
 		</div>
-
+		<br>
 		<div class="container">
 			<div class="row">
 				<div class="grid_12">
@@ -195,7 +202,7 @@
 				</div>
 			</div>
 		</div>
-		
+		<br>
 	</div>
 	
 </section>
@@ -258,10 +265,11 @@
 <script>
 	$(document).ready(function() {
 		$("#logout").click(function() {
-			<%sesion.invalidate();%>;
+			
 		});
 	});
 </script>
+
 
 </body>
 </html>
